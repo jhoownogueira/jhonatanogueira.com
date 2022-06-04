@@ -1,0 +1,14 @@
+@font-face {
+    font-family: MajorantRg;
+    src: url(../fonts/Majorant-Rg.ttf);
+}
+@font-face {
+    font-family: MajorantBd;
+    src: url(../fonts/Majorant-Bd.ttf);
+}
+
+@mixin responsive($screenWidth) {
+    @media(max-width: $screenWidth) {
+        @content;
+    }
+}

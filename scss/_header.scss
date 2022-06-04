@@ -1,0 +1,56 @@
+header {
+    display: flex;
+    height: 8rem;
+    align-items: center;
+    .container {
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            ul {
+                display: flex;
+                li {
+                    padding-bottom: 0.4rem;
+                    transition: all 0.8s;
+                    &:hover {
+                        border-bottom: 1px solid $green-light100;
+                    }
+                    &:not(&:first-child) {
+                        margin-left: 6.4rem;
+                    }
+                    a {
+                        font-size: 1.6rem;
+                        color: $green-light100;
+                        line-height: 112%;
+                        letter-spacing: -1px;
+
+                    }
+                }
+            }
+            .talk-to-me {
+                font-size: 1.6rem;
+                line-height: 120%;
+                color: $green-light100;
+                padding: 0.8rem 1.8rem;
+                border: 1px solid $green-light100;
+                transition: all 0.5s;
+                &:hover {
+                    background-color: $green-light100;
+                    color: $white;
+                }
+            }
+        }
+    }
+    @include responsive(480px) {
+        .container {
+            nav {
+                ul {
+                    margin-right: 1rem;
+                }
+                .talk-to-me {
+                    display: none;
+                }
+            }
+        }
+    }
+}
