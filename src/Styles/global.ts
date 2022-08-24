@@ -46,6 +46,11 @@ export const GlobalStyle = createGlobalStyle`
         cursor: pointer;
     }
 
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
     [disable] {
         opacity: 0.6;
         cursor: not-allowed;
