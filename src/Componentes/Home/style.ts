@@ -217,3 +217,108 @@ export const SectionSevices = styled.section`
 
     }
 `
+
+export const SectionTools = styled.section`
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    .content {
+        width: 100%;
+        max-width: 1248px;
+        padding: 0 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
+        justify-content: center;
+
+        h2 {
+            width: fit-content;
+            position: relative;
+            margin-bottom: 50px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 70px;
+                height: 6px;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(90deg, #A478E8 0%, #516CF7 100%);
+                opacity: 0.5;
+                border-radius: 0px 8px;
+            }
+        }
+        .tools {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+`
+
+export const FollowMe = styled.section`
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            font-weight: 700;
+            font-size: 0.875rem;
+            line-height: 120%;
+            letter-spacing: -0.02em;
+            background: linear-gradient(90deg, #A478E8 0%, #516CF7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .icon-logo {
+                width: 176px;
+                height: 176px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #FFFFFF;
+                box-shadow: 0px 0px 37px rgba(0, 0, 0, 0.15);
+                border-radius: 42.3077px;
+                margin-top: 16px;
+                margin-bottom: 24px;
+                transition: all 1s ease-in-out;
+
+                &:hover {
+                    transform: rotate3d(1, 1, 0.1, 360deg);
+                    filter: brightness(0.90);
+                }
+            }
+
+        .social-media {
+            width: 120px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .icon {
+                width: 32px;
+                height: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.3s ease-in-out;
+                
+                &:hover {
+                    filter: brightness(0.5);
+                }
+            }
+        }
+    }
+`
