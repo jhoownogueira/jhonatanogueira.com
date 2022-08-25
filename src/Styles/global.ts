@@ -51,11 +51,27 @@ export const GlobalStyle = createGlobalStyle`
         max-width: 100%;
     }
 
-    h1 {
-        font-family: 'DM Sans', sans-serif;
+    h1, h2, h5 {
         font-weight: 700;
-        font-size: 64px;
         letter-spacing: -0.02em;
+        color: var(--purple-text);
+    }
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+    }
+
+    h6 {
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 14px;
         color: var(--purple-text);
     }
 
