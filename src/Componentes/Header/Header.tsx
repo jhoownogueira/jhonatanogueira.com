@@ -1,6 +1,6 @@
 import React from 'react';
 import logoHeader from '../../assets/logoheader.svg';
-import { PrimaryButton } from '../../Buttons/PrimaryButton';
+import { PrimaryButton } from '../../Styles/StylesComponents';
 import { Container } from './styles';
 
 export function Header() {
@@ -20,7 +20,9 @@ export function Header() {
                             <a href="">Contato</a>
                         </li>
                     </ul>
-                    <PrimaryButton />
+                    <PrimaryButton>
+                        <span>Fale comigo</span>
+                    </PrimaryButton>
                 </div>
             </div>
         </Container>
