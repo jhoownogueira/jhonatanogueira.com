@@ -82,3 +82,32 @@ export const CardFormation = styled.div`
         }
     }
 `
+
+export const CardTools = styled.div`
+    width: 201.87px;
+    height: 207px;
+    background: #F7F9FC;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        filter: brightness(0.9);
+    }
+
+    img {
+        width: 53px;
+        margin-bottom: 21px;
+    }
+
+    span {
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 120%;
+    }
+
+`

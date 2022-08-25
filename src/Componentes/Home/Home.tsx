@@ -1,5 +1,12 @@
-import { SectionAboutMe, SectionFormation, SectionSevices } from "./style";
-import { CardFormation } from "../../Styles/StylesComponents";
+import { 
+    FollowMe,
+         SectionAboutMe, 
+         SectionFormation, 
+         SectionSevices, 
+         SectionTools 
+        } from "./style";
+
+import { CardFormation, CardTools } from "../../Styles/StylesComponents";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -24,6 +31,17 @@ import unifevImg from '../../assets/courses/unifev.png';
 import interfacesImg from '../../assets/services/interfaces.svg';
 import devImg from '../../assets/services/dev.svg';
 import aplicationImg from '../../assets/services/aplication.svg';
+
+import vscodeImg from '../../assets/tools/visual.png';
+import githubImg from '../../assets/tools/github.png';
+import figmaImg from '../../assets/tools/figma.png';
+import psImg from '../../assets/tools/ps.png';
+import ilustratorImg from '../../assets/tools/ilustrator.png';
+
+import logoJnPurple from '../../assets/logojncolor.svg';
+import linkedinPurple from '../../assets/socialmedia/linkedinpurple.svg';
+import facebookPurple from '../../assets/socialmedia/facebookpurple.svg';
+import instagramPurple from '../../assets/socialmedia/instagrampurple.svg';
 
 
 export function Home() {
@@ -196,6 +214,60 @@ export function Home() {
                 </div>
             </div>
         </SectionSevices>
+
+        <SectionTools>
+            <div className="content">
+                <h2>Ferramentas</h2>
+                <div className="tools">
+                    <CardTools>
+                        <img src={vscodeImg} alt="Visual Studio Code" />
+                        <span>Visual Studio Code</span>
+                    </CardTools>
+                    <CardTools>
+                        <img src={githubImg} alt="Github" />
+                        <span>Github</span>
+                    </CardTools>
+                    <CardTools>
+                        <img src={figmaImg} alt="Figma" />
+                        <span>Figma</span>
+                    </CardTools>
+                    <CardTools>
+                        <img src={psImg} alt="Photoshop" />
+                        <span>Photoshop</span>
+                    </CardTools>
+                    <CardTools>
+                        <img src={ilustratorImg} alt="Illustrator" />
+                        <span>Illustrator</span>
+                    </CardTools>
+                </div>
+            </div>
+        </SectionTools>
+
+        <FollowMe>
+            <div className="content">
+                <span>&#123;Follow me&#125;</span>
+                <div className="icon-logo">
+                    <img src={logoJnPurple} alt="" />
+                </div>
+                <div className="social-media">
+                    <div className="icon">
+                        <a href="https://www.linkedin.com/in/jhoownogueira/" target="_blank">
+                        <img src={linkedinPurple} alt="" />
+                        </a>
+                    </div>
+                    <div className="icon">
+                        <a href="https://www.facebook.com/jhonatanogueiraa/" target="_blank">
+                        <img src={facebookPurple} alt="" />
+                        </a>
+                    </div>
+                    <div className="icon">
+                        <a href="https://www.instagram.com/jhonatanogueira_f/" target="_blank">
+                        <img src={instagramPurple} alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </FollowMe>
         </>
     );
 }
