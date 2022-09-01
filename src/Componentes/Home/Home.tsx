@@ -251,17 +251,17 @@ export function Home() {
                 </div>
                 <div className="social-media">
                     <div className="icon">
-                        <a href="https://www.linkedin.com/in/jhoownogueira/" target="_blank">
+                        <a href="https://www.linkedin.com/in/jhoownogueira/" target="_blank" rel="noreferrer">
                         <img src={linkedinPurple} alt="" />
                         </a>
                     </div>
                     <div className="icon">
-                        <a href="https://www.facebook.com/jhonatanogueiraa/" target="_blank">
+                        <a href="https://www.facebook.com/jhonatanogueiraa/" target="_blank" rel="noreferrer">
                         <img src={facebookPurple} alt="" />
                         </a>
                     </div>
                     <div className="icon">
-                        <a href="https://www.instagram.com/jhonatanogueira_f/" target="_blank">
+                        <a href="https://www.instagram.com/jhonatanogueira_f/" target="_blank" rel="noreferrer">
                         <img src={instagramPurple} alt="" />
                         </a>
                     </div>
