@@ -11,13 +11,13 @@ export function Header() {
                 <div className='right-container'>
                     <ul>
                         <li>
-                            <a href="#">Sobre mim</a>
+                            <a href="https://github.com">Sobre mim</a>
                         </li>
                         <li>
-                            <a href="#">Portifólio</a>
+                            <a href="https://github.com">Portifólio</a>
                         </li>
                         <li>
-                            <a href="#">Contato</a>
+                            <a href="https://github.com">Contato</a>
                         </li>
                     </ul>
                     <PrimaryButton>
