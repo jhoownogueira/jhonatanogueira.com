@@ -111,3 +111,88 @@ export const CardTools = styled.div`
     }
 
 `
+
+interface AnimationButton {
+    isActive: boolean,
+}
+
+export const MobileButton = styled.button<AnimationButton>`
+
+    ${(props) => props.isActive ? 
+    `
+    background: transparent;
+    border: 0;
+    width: 48px;
+    height: 48px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    display: none;
+
+    div {
+        width: 35px;
+        height: 3px;
+        background: linear-gradient(90deg, #A478E8 0%, #516CF7 100%);
+        border-radius: 8px;
+        transition: all 0.3s;
+        .mid-bullet {
+            opacity:1
+        }
+    }
+    .top-bullet {
+        transform: rotate(45deg) translateY(2px);
+       }
+    .mid-bullet {
+        opacity:0;
+        display: none;
+    }
+    .bottom-bullet {
+        transform: rotate(-45deg) translateY(-2px);
+    }
+
+    @media(max-width:700px) {
+        display: flex;
+    }
+
+    `
+
+    : 
+
+    `
+        background: transparent;
+        border: 0;
+        width: 48px;
+        height: 48px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        display: none;
+        transition: all 0.3s;
+       
+    div {
+        width: 35px;
+        height: 3px;
+        background: linear-gradient(90deg, #A478E8 0%, #516CF7 100%);
+        border-radius: 8px;
+        transition: all 0.3s;
+    }
+    .top-bullet {
+        transform: rotate(0deg);
+       }
+       .mid-bullet {
+           opacity: 1;
+       }
+       .bottom-bullet {
+           transform: rotate(0deg);
+       }
+
+       @media(max-width:700px) {
+        display: flex;
+    }
+
+    `
+    };
+
+`

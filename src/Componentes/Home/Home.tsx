@@ -102,7 +102,18 @@ export function Home() {
                 modules={[Pagination]} 
                 className="slider-courses"
                 spaceBetween={16}
-                slidesPerView={3.2}
+                slidesPerView={1.2}
+                breakpoints={{
+                    640: {
+                        slidesPerView: 2.2
+                    },
+                    840: {
+                        slidesPerView: 2.8
+                    },
+                    1050: {
+                        slidesPerView: 3.5
+                    }
+                }}
                 >
                     <SwiperSlide>
                         <CardFormation>

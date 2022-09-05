@@ -76,6 +76,19 @@ export const SectionAboutMe = styled.section`
         }
     }
 
+    @media(max-width: 640px) {
+        height: 1100px;
+        .content {
+            flex-direction: column;
+            .left-container {
+                margin-bottom: 80px;
+            }
+        }
+    }
+    @media(max-width: 540px) {
+        height: 1000px;
+    }
+
 `
 
 export const SectionFormation = styled.section`
@@ -128,6 +141,16 @@ export const SectionFormation = styled.section`
 
                 &-active {
                     width: 20px;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 657px) {
+        .content {
+            h2 {
+                &::before {
+                    right: unset;
                 }
             }
         }
@@ -216,6 +239,22 @@ export const SectionSevices = styled.section`
         }
 
     }
+
+    @media(max-width: 1200px) {
+        height: 1500px;
+        .content {
+            h2 {
+                &::before {
+                    right: -5px;
+                }
+            }
+            .services {
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+            }
+        }
+    }
 `
 
 export const SectionTools = styled.section`
@@ -254,6 +293,18 @@ export const SectionTools = styled.section`
             display: flex;
             align-items: center;
             justify-content: space-between;
+            span {
+                text-align: center;
+            }
+        }
+    }
+
+    @media(max-width:480px) {
+        height: 1200px;
+        .content {
+            .tools {
+                flex-direction: column;
+            }
         }
     }
 
