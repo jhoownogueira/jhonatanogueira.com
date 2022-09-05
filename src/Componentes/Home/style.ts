@@ -304,6 +304,7 @@ export const SectionTools = styled.section`
         .content {
             .tools {
                 flex-direction: column;
+                gap: 24px;
             }
         }
     }
