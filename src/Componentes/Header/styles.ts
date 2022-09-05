@@ -58,10 +58,10 @@ export const Container = styled.header`
     }
 
     .mobile-menu {
-        position: absolute;
+        position: fixed;
         top: 88px;
         right: 0;
-        width: 40%;
+        width: 55%;
         height: 100vh;
         z-index: 99;
 
@@ -69,8 +69,9 @@ export const Container = styled.header`
 
         display: flex;
         flex-direction: column;
-        padding: 64px;
+        padding: 50px;
         transform: translateX(100%);
+        opacity: 0;
         transition: all 0.4s ease-in-out;
 
         ul {
@@ -101,6 +102,7 @@ export const Container = styled.header`
 
         &.open {
             transform: translateX(0);
+            opacity: 1;
         }
     }
 
