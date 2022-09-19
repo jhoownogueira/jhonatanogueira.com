@@ -1,18 +1,21 @@
-import { 
-    FollowMe,
-         SectionAboutMe, 
-         SectionFormation, 
-         SectionSevices, 
-         SectionTools 
-        } from "./style";
+import 
+ { 
+  FollowMe,
+  SectionAboutMe, 
+  SectionFormation, 
+  SectionSevices, 
+  SectionTools 
+ } 
+from "./style";
 
-import { CardFormation, CardTools } from "../../Styles/StylesComponents";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
 import { Pagination } from "swiper";
+import { CardFormation } from "../GlobalsComponents/CardFormation";
+import { CardTools } from "../GlobalsComponents/CardTools";
 
 import htmlImg from '../../assets/card-tecnology-html.svg';
 import cssImg from '../../assets/card-tecnology-css.svg';
@@ -42,6 +45,7 @@ import logoJnPurple from '../../assets/logojncolor.svg';
 import linkedinPurple from '../../assets/socialmedia/linkedinpurple.svg';
 import facebookPurple from '../../assets/socialmedia/facebookpurple.svg';
 import instagramPurple from '../../assets/socialmedia/instagrampurple.svg';
+
 
 
 export function Home() {
@@ -116,76 +120,52 @@ export function Home() {
                 }}
                 >
                     <SwiperSlide>
-                        <CardFormation>
-                        <div className="title">
-                                <img src={codeBoostImg} alt="Codeboost" />
-                                <h6>Codeboost William Moreira</h6>
-                        </div>
-                        <div className="info">
-                            <p>Front-end. HTML, CSS, SASS, JS, GULP e React</p>
-                            <span>2022</span>
-                        </div>
-                        </CardFormation>
+                        <CardFormation 
+                         img={codeBoostImg}
+                         name="Codeboost William Moreira"
+                         description="Front-end. HTML, CSS, SASS, JS, GULP e React"
+                         conclusion="2022"
+                        />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <CardFormation>
-                        <div className="title">
-                                <img src={frontStartImg} alt="Codeboost" />
-                                <h6>Frontstart Isadora Stangarlin</h6>
-                        </div>
-                        <div className="info">
-                            <p>Front-end. HTML, CSS, LESS, JS e VUE</p>
-                            <span>2022</span>
-                        </div>
-                        </CardFormation>
+                        <CardFormation 
+                         img={frontStartImg}
+                         name="Frontstart Isadora Stangarlin"
+                         description="Front-end. HTML, CSS, LESS, JS e VUE"
+                         conclusion="2022"
+                        />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <CardFormation>
-                        <div className="title">
-                                <img src={cursoFigmatImg} alt="Codeboost" />
-                                <h6>Curso de Figma Felipe Santana</h6>
-                        </div>
-                        <div className="info">
-                            <p>Design de Interfaces, Prototipagem e Handoff</p>
-                            <span>2022</span>
-                        </div>
-                        </CardFormation>  
+                        <CardFormation 
+                         img={cursoFigmatImg}
+                         name="Curso de Figma Felipe Santana"
+                         description="Design de Interfaces, Prototipagem e Handoff"
+                         conclusion="2022"
+                        />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <CardFormation>
-                        <div className="title">
-                                <img src={anhembiImg} alt="Codeboost" />
-                                <h6>Anhembi Morumbi</h6>
-                        </div>
-                        <div className="info">
-                            <p>Pós Graduação em Marketing e Comunição</p>
-                            <span>2022</span>
-                        </div>
-                        </CardFormation>  
+                        <CardFormation 
+                         img={anhembiImg}
+                         name="Anhembi Morumbi"
+                         description="Pós Graduação em Marketing e Comunição"
+                         conclusion="2022"
+                        /> 
                     </SwiperSlide>
                     <SwiperSlide>
-                        <CardFormation>
-                        <div className="title">
-                                <img src={adsGoogleImg} alt="Codeboost" />
-                                <h6>Google Ads Completo Erick Scudero</h6>
-                        </div>
-                        <div className="info">
-                            <p>Redes de Display, remarketing e Youtube ads.</p>
-                            <span>2021</span>
-                        </div>
-                        </CardFormation> 
+                        <CardFormation 
+                         img={adsGoogleImg}
+                         name="Google Ads Completo Erick Scudero"
+                         description="Redes de Display, remarketing e Youtube ads."
+                         conclusion="2021"
+                        /> 
                     </SwiperSlide>
                     <SwiperSlide>
-                        <CardFormation>
-                        <div className="title">
-                                <img src={unifevImg} alt="Codeboost" />
-                                <h6>Unifev Votuporanga</h6>
-                        </div>
-                        <div className="info">
-                            <p>Bacharelado em Arquitetura e Urbanismo.</p>
-                            <span>2018</span>
-                        </div>
-                        </CardFormation>
+                        <CardFormation 
+                         img={unifevImg}
+                         name="Unifev Votuporanga"
+                         description="Bacharelado em Arquitetura e Urbanismo"
+                         conclusion="2018"
+                        /> 
                     </SwiperSlide>
                 </Swiper>
             </div>
@@ -230,26 +210,26 @@ export function Home() {
             <div className="content">
                 <h2>Ferramentas</h2>
                 <div className="tools">
-                    <CardTools>
-                        <img src={vscodeImg} alt="Visual Studio Code" />
-                        <span>Visual Studio Code</span>
-                    </CardTools>
-                    <CardTools>
-                        <img src={githubImg} alt="Github" />
-                        <span>Github</span>
-                    </CardTools>
-                    <CardTools>
-                        <img src={figmaImg} alt="Figma" />
-                        <span>Figma</span>
-                    </CardTools>
-                    <CardTools>
-                        <img src={psImg} alt="Photoshop" />
-                        <span>Photoshop</span>
-                    </CardTools>
-                    <CardTools>
-                        <img src={ilustratorImg} alt="Illustrator" />
-                        <span>Illustrator</span>
-                    </CardTools>
+                 <CardTools 
+                  img={vscodeImg}
+                  name="Visual Studio Code"
+                 />
+                 <CardTools 
+                  img={githubImg}
+                  name="Github"
+                 /> 
+                 <CardTools 
+                  img={figmaImg}
+                  name="Figma"
+                 /> 
+                 <CardTools 
+                  img={psImg}
+                  name="Photoshop"
+                 /> 
+                 <CardTools 
+                  img={ilustratorImg}
+                  name="Illustrator"
+                 />  
                 </div>
             </div>
         </SectionTools>

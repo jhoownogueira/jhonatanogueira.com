@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import { Home } from '../Componentes/Home/Home';
-import { Portifolio } from '../Componentes/Portifolio/Portifolio';
+import { Home } from './Componentes/Home/Home';
+import { Portifolio } from './Componentes/Portifolio/Portifolio';
 
 export function Router() {
     return (

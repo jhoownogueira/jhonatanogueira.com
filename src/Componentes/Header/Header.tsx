@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import logoHeader from '../../assets/logoheader.svg';
 
-import { MobileButton, PrimaryButton } from '../../Styles/StylesComponents';
+import { MobileButton, PrimaryButton } from '../../StylesGlobals/StylesComponents';
 import { Container } from './styles';
 
 
@@ -18,13 +18,13 @@ export function Header() {
                 <nav className='right-container'>
                     <ul>
                         <li>
-                            <Link to='/'>Sobre mim</Link>
+                            <NavLink to='/'>Sobre mim</NavLink>
                         </li>
                         <li>
-                            <Link to='/portifolio'>Portifólio</Link>
+                            <NavLink to='/portifolio'>Portifólio</NavLink>
                         </li>
                         <li>
-                            <Link to='/contato'>Contato</Link>
+                            <NavLink to='/contato'>Contato</NavLink>
                         </li>
                     </ul>
                     <PrimaryButton>
@@ -42,13 +42,13 @@ export function Header() {
                 <nav className={isActive ? 'mobile-menu open' : 'mobile-menu'}>
                     <ul>
                         <li>
-                            <Link to='/'>Sobre mim</Link>
+                            <NavLink to='/'>Sobre mim</NavLink>
                         </li>
                         <li>
-                            <Link to='/portifolio'>Portifólio</Link>
+                            <NavLink to='/portifolio'>Portifólio</NavLink>
                         </li>
                         <li>
-                            <Link to='/contato'>Contato</Link>
+                            <NavLink to='/contato'>Contato</NavLink>
                         </li>
                     </ul>
                 </nav>

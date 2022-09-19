@@ -46,7 +46,7 @@ export const Container = styled.header`
                     color: var(--primary-color);
                     font-weight: 700;
                 }
-                &:active {
+                &.active {
                     color: var(--primary-color);
                     font-weight: 500;
                     border-bottom: 1px solid var(--primary-color);

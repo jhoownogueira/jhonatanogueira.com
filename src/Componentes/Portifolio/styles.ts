@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const SectionProjects = styled.section`
     width: 100%;
-    height: 780px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -12,11 +11,14 @@ export const SectionProjects = styled.section`
         max-width: 1248px;
         padding: 0 16px;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-top: 80px;
+        margin-bottom: 80px;
 
         .title {
+            margin-bottom: 120px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -47,5 +49,34 @@ export const SectionProjects = styled.section`
             }
 
         }
+        .portifolio {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+    }
+
+    @media(max-width: 900px) {
+         .content {
+            .portifolio {
+                grid-template-columns: repeat(2, 1fr);
+            }
+         }   
+    }
+    @media(max-width: 635px) {
+         .content {
+            .title {
+                h2 {
+                    &::before {
+                        right: unset;
+                        left: 0;
+                        bottom: -10px;
+                    }
+                }
+            }
+            .portifolio {
+                grid-template-columns: repeat(1, 1fr);
+            }
+         }   
     }
 `

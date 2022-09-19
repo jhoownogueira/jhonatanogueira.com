@@ -22,7 +22,7 @@ export const PrimaryButton = styled.button`
     }
 `
 
-export const CardFormation = styled.div`
+export const StyleCardFormation = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,7 +83,7 @@ export const CardFormation = styled.div`
     }
 `
 
-export const CardTools = styled.div`
+export const StyleCardTools = styled.div`
     width: 201.87px;
     height: 207px;
     background: #F7F9FC;
@@ -195,4 +195,59 @@ export const MobileButton = styled.button<AnimationButton>`
     `
     };
 
+`
+
+export const StyleCardPortifolio = styled.div`
+    width: 100%;
+    max-width: 375px;
+    height: 381px;
+    border-radius: 32px;
+    padding: 50px 57px 64px;
+    background: var(--white);
+    border: 1px solid var(--soft-terciary);
+    box-shadow: 0px 0px 15px rgba(226, 230, 238, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h5 {
+        height: 58px;
+    }
+
+    span {
+        height: 145px;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.875rem;
+        line-height: 120%;
+        margin: 40px 0 0;
+    }
+
+    a {
+        width: 100%;
+        max-width: 260px;
+        height: 48px;
+        border: 1px solid var(--primary-color);
+        border-radius: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--primary-color);
+
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 48px;
+        letter-spacing: -1px;
+        transition: all 0.2s;
+        &:hover {
+            color: var(--white);
+            border: 1px solid transparent;
+            background: var(--purple-linear);
+            font-size: 1.2rem;
+            letter-spacing: 0;
+        }
+
+    }
 `
