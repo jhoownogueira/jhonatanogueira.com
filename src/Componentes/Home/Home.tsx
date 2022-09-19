@@ -45,10 +45,18 @@ import logoJnPurple from '../../assets/logojncolor.svg';
 import linkedinPurple from '../../assets/socialmedia/linkedinpurple.svg';
 import facebookPurple from '../../assets/socialmedia/facebookpurple.svg';
 import instagramPurple from '../../assets/socialmedia/instagrampurple.svg';
+import { supabase } from "../../api/supabase";
 
 
 
 export function Home() {
+
+   async function teste() {
+    const { data } = await supabase.from("formation").select("*")
+    console.log(data)
+   }
+   teste()
+
     return (
         <>
         <SectionAboutMe>
