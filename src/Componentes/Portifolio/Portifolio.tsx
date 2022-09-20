@@ -1,8 +1,29 @@
 
+import { useEffect, useState } from 'react';
+import { supabase } from '../../api/supabase';
 import { CardPortifolio } from '../GlobalsComponents/CardPortifolio';
 import { SectionProjects } from './styles';
 
+interface Projetos {
+ id: number;
+ name: string;
+ description: string;
+ url: string;
+}
+
 export function Portifolio() {
+    const [listaProjetos, setListaProjetos] = useState<Projetos[] | null>([]);
+
+    useEffect(() => {
+       supabase
+       .from("portifolio")
+       .select("*")
+       .order("id")
+       .then(({ data }) => {
+        setListaProjetos(data)
+       })  
+    }, [])
+ 
     return (
         <SectionProjects>
             <div className="content">
@@ -11,7 +32,18 @@ export function Portifolio() {
                  <p>Seja para trabalho, hobby ou por curiosidade. Gosto de criar algo novo.</p>
                 </div>
                 <div className="portifolio">
-                 <CardPortifolio 
+                 
+                 {listaProjetos?.map(projetos => {
+                  return (
+                   <CardPortifolio 
+                   key={projetos.id}
+                   name={projetos.name}
+                   description={projetos.description}
+                   url={projetos.url}
+                   />
+                  )
+                 })}
+                 {/* <CardPortifolio 
                   name="Cinehome"
                   description="Criação de protótipos de interfaces web e mobile para validação e testes antes de colocar a ideia em execução."
                   url="https://jhoownogueira.github.io/Cinehome/"
@@ -40,7 +72,7 @@ export function Portifolio() {
                   name="Pokedex - API"
                   description="Criação de protótipos de interfaces web e mobile para validação e testes antes de colocar a ideia em execução."
                   url="https://jhoownogueira.github.io/Projeto-Pokemon-API/"
-                 />
+                 /> */}
 
                 </div>
             </div>
