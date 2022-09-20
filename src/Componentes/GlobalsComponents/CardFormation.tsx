@@ -4,7 +4,7 @@ interface CardFormationProps {
  img: string;
  name: String;
  description: String;
- conclusion: String;
+ conclusion: number;
 }
 
 export function CardFormation(props: CardFormationProps) {

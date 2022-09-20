@@ -9,6 +9,8 @@ import
 from "./style";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { supabase } from "../../api/supabase";
+import { useEffect, useState } from "react";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -24,38 +26,54 @@ import tsImg from '../../assets/card-tecnology-ts.svg';
 import reactImg from '../../assets/card-tecnology-react.svg';
 import jhoowImg from '../../assets/jhonatanogueira.png';
 
-import codeBoostImg from '../../assets/courses/codeboost.png';
-import frontStartImg from '../../assets/courses/frontstart.png';
-import cursoFigmatImg from '../../assets/courses/cursodefigma.png';
-import anhembiImg from '../../assets/courses/anhambimorumbi.png';
-import adsGoogleImg from '../../assets/courses/adsgoogle.png';
-import unifevImg from '../../assets/courses/unifev.png';
-
 import interfacesImg from '../../assets/services/interfaces.svg';
 import devImg from '../../assets/services/dev.svg';
 import aplicationImg from '../../assets/services/aplication.svg';
-
-import vscodeImg from '../../assets/tools/visual.png';
-import githubImg from '../../assets/tools/github.png';
-import figmaImg from '../../assets/tools/figma.png';
-import psImg from '../../assets/tools/ps.png';
-import ilustratorImg from '../../assets/tools/ilustrator.png';
 
 import logoJnPurple from '../../assets/logojncolor.svg';
 import linkedinPurple from '../../assets/socialmedia/linkedinpurple.svg';
 import facebookPurple from '../../assets/socialmedia/facebookpurple.svg';
 import instagramPurple from '../../assets/socialmedia/instagrampurple.svg';
-import { supabase } from "../../api/supabase";
 
+interface Cursos {
+ id: number;
+ name: string;
+ description: string;
+ conclusion: number;
+ coverUrl: string;
+}
 
+interface Ferramentas {
+ id: number;
+ name: string;
+ imgUrl: string;
+}
 
 export function Home() {
 
-   async function teste() {
-    const { data } = await supabase.from("formation").select("*")
-    console.log(data)
-   }
-   teste()
+    const [listaCursos, setListaCursos] = useState<Cursos[] | null>([]);
+
+    useEffect(() => {
+       supabase
+       .from("formation")
+       .select("*")
+       .order("id")
+       .then(({ data }) => {
+        setListaCursos(data)
+       })  
+    }, [])
+
+    const [listaFerramentas, setListaFerramentas] = useState<Ferramentas[] | null>([]);
+
+    useEffect(() => {
+       supabase
+       .from("tools")
+       .select("*")
+       .order("id")
+       .then(({ data }) => {
+        setListaFerramentas(data)
+       })  
+    }, [])
 
     return (
         <>
@@ -127,54 +145,18 @@ export function Home() {
                     }
                 }}
                 >
-                    <SwiperSlide>
+                    {listaCursos?.map(cursos => {
+                     return (
+                      <SwiperSlide>
                         <CardFormation 
-                         img={codeBoostImg}
-                         name="Codeboost William Moreira"
-                         description="Front-end. HTML, CSS, SASS, JS, GULP e React"
-                         conclusion="2022"
+                         img={cursos.coverUrl}
+                         name={cursos.name}
+                         description={cursos.description}
+                         conclusion={cursos.conclusion}
                         />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <CardFormation 
-                         img={frontStartImg}
-                         name="Frontstart Isadora Stangarlin"
-                         description="Front-end. HTML, CSS, LESS, JS e VUE"
-                         conclusion="2022"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <CardFormation 
-                         img={cursoFigmatImg}
-                         name="Curso de Figma Felipe Santana"
-                         description="Design de Interfaces, Prototipagem e Handoff"
-                         conclusion="2022"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <CardFormation 
-                         img={anhembiImg}
-                         name="Anhembi Morumbi"
-                         description="Pós Graduação em Marketing e Comunição"
-                         conclusion="2022"
-                        /> 
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <CardFormation 
-                         img={adsGoogleImg}
-                         name="Google Ads Completo Erick Scudero"
-                         description="Redes de Display, remarketing e Youtube ads."
-                         conclusion="2021"
-                        /> 
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <CardFormation 
-                         img={unifevImg}
-                         name="Unifev Votuporanga"
-                         description="Bacharelado em Arquitetura e Urbanismo"
-                         conclusion="2018"
-                        /> 
-                    </SwiperSlide>
+                      </SwiperSlide>
+                     )
+                    })}
                 </Swiper>
             </div>
         </SectionFormation>
@@ -218,26 +200,14 @@ export function Home() {
             <div className="content">
                 <h2>Ferramentas</h2>
                 <div className="tools">
-                 <CardTools 
-                  img={vscodeImg}
-                  name="Visual Studio Code"
-                 />
-                 <CardTools 
-                  img={githubImg}
-                  name="Github"
-                 /> 
-                 <CardTools 
-                  img={figmaImg}
-                  name="Figma"
-                 /> 
-                 <CardTools 
-                  img={psImg}
-                  name="Photoshop"
-                 /> 
-                 <CardTools 
-                  img={ilustratorImg}
-                  name="Illustrator"
-                 />  
+                 {listaFerramentas?.map(ferramentas => {
+                  return (
+                   <CardTools 
+                    img={ferramentas.imgUrl}
+                    name={ferramentas.name}
+                   />
+                  )
+                 })}
                 </div>
             </div>
         </SectionTools>
