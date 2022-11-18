@@ -3,10 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import logoHeader from "../../assets/logoheader.svg";
 
-import {
-  MobileButton,
-  PrimaryButton,
-} from "../../StylesGlobals/StylesComponents";
+import { MobileButton } from "../../StylesGlobals/StylesComponents";
 import { Container } from "./styles";
 
 export function Header() {
