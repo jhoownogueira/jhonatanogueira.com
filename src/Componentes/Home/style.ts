@@ -12,6 +12,7 @@ export const SectionAboutMe = styled.section`
         max-width: 1248px;
         padding: 0 16px;
         display: flex;
+        gap: 16px;
         align-items: center;
         justify-content: space-between;
         margin-top: 80px;

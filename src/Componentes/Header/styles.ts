@@ -20,7 +20,7 @@ export const Container = styled.header`
 
     .right-container {
         width: 100%;
-        max-width: 486px;
+        max-width: 250px;
         display: flex;
         justify-content: space-between;
         align-items: center;
