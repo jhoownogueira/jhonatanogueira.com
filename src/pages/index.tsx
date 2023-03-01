@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import {HomeContainer} from "@/styles/pages/Home";
 
 export default function Home() {
   return (
@@ -41,7 +42,16 @@ export default function Home() {
         />
         {/*<meta property="twitter:image" content="/images/meta.jpg" />*/}
       </Head>
-      <h1>Hello World!</h1>
+      <HomeContainer backgroundImage="../images/bgHome.svg">
+        <div className="grid">
+          <section className="home">
+            <span>Olá, meu nome é Jhonata 👋</span>
+            <h1>Desenvedor front-end,</h1>
+            <p>apaixonado por tecnologia e design.</p>
+            <button>Download CV</button>
+          </section>
+        </div>
+      </HomeContainer>
     </>
   )
 }
